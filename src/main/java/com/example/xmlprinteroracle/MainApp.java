@@ -21,7 +21,25 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        primaryStage.setTitle("Imprimir xml y guardar en oracle 19c");
+
+        xmlArea = new TextArea();
+        xmlArea.setWrapText(false);
+        xmlArea.setPrefRowCount(40);
+        xmlArea.setPrefColumnCount(120);
+
+        Button btnOpen = new Button("abrir xml");
+        Button btnPrint = new Button("inprimir");
+        Button btnSaveDb = new Button("guardar en BD ( oracle )");
+
+        btnOpen.setOnAction(e -> openXml(primaryStage));
+        btnPrint.setOnAction(e -> XmlPrinter.printNode(xmlArea));
+        btnSaveDb.setOnAction(e -> saveToDatabase());
 
     }
+
+    private void openXml(Stage primaryStage) {}
+
+    private void saveToDatabase() {}
 
 }
