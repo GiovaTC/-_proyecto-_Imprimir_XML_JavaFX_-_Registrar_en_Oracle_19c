@@ -82,7 +82,7 @@ public class MainApp extends Application {
         statusLabel.setText("Guardando en BD...");
         try {
             DBHelper db = new DBHelper();
-            db.insertarXml(currentFile != null ? currentFile.getName() : "sin_nombre.xml", "usuario_app", xml);
+            db.insertXml(currentFile != null ? currentFile.getName() : "sin_nombre.xml", "usuario_app", xml);
             statusLabel.setText("guardado correctamente en la BD.");
         } catch (Exception ex) {
             statusLabel.setText("Error al guardar en BD: " + ex.getMessage());
