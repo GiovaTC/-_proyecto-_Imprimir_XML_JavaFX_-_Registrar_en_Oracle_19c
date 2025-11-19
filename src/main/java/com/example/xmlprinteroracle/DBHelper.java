@@ -11,4 +11,7 @@ public class DBHelper {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
+
+    public void insertarXml(String s, String usuarioApp, String xml) {
+    }
 }
